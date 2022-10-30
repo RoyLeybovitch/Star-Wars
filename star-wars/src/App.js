@@ -1,6 +1,6 @@
-import { MovieList } from './cmps/MovieList'
+import { MovieApp } from './pages/MovieApp'
 
 function App() {
-    return <MovieList />
+    return <MovieApp />
 }
 export default App

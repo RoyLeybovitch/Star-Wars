@@ -1,10 +1,19 @@
 import { Component } from 'react'
-import MoviePreview from './MoviePreview'
+import { MoviePreview } from './MoviePreview'
 
-export function MovieList({ movies }) {
+export function MovieList({ movies, updateCurrMovie }) {
+    console.log('movies', movies)
+
     return (
         <div className='movie-list'>
-            <MoviePreview />
+            {movies?.length &&
+                movies.map((movie) => (
+                    <MoviePreview
+                        updateCurrMovie={updateCurrMovie}
+                        key={movie['episode_id']}
+                        movie={movie}
+                    />
+                ))}
         </div>
     )
 }
