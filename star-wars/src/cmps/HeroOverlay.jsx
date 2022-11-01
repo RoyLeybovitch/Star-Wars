@@ -5,7 +5,7 @@ export const HeroOverlay = ({ currMovie }) => {
         <div
             className='hero-overlay'
             style={{
-                backgroundImage: `url('/images/${currMovie.episode_id}.jpg')`,
+                backgroundImage: `url('./images/${currMovie.episode_id}.jpg')`,
             }}
         >
             HeroOverlay

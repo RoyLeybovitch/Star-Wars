@@ -2,7 +2,7 @@
   
   "name": "star-wars",
   "version": "0.1.0",
-  "homepage": "https://royleybovitch.github.io/star-wars",
+  "homepage": "https://RoyLeybovitch.github.io/Star-Wars",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

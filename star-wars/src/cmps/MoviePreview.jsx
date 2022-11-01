@@ -12,7 +12,7 @@ export const MoviePreview = ({
                 updateCurrMovie(movie)
             }}
             style={{
-                backgroundImage: `url('/images/${movie.episode_id}.jpg')`,
+                backgroundImage: `url('./images/${movie.episode_id}.jpg')`,
             }}
         >
             {' '}
