@@ -1,10 +1,11 @@
 import axios from 'axios'
 import util from '../services/util.service'
 const MOVIES_KEY = 'moviesDB'
+const FAV_MOVIE_KEY = 'favoriteMovie'
+var gMovies = []
 const cacheKey = 'caching'
 let cache = util.loadFromStorage(cacheKey)
 cache = cache ? JSON.parse(cache) : {}
-
 export async function getMovies() {
     let movies = util.loadFromStorage(MOVIES_KEY) || []
     if (!movies.length) {
@@ -13,16 +14,13 @@ export async function getMovies() {
         movies = res.data.results
         util.saveToStorage(MOVIES_KEY, movies)
     }
+    gMovies = movies
     return movies
 }
 
-export async function getMovie(movieNum) {
-    if (cache[movieNum]) {
-        return cache[movieNum]
-    }
-    const url = `https://swapi.dev/api/films/${movieNum}?format=json`
-    const res = await axios.get(url)
-    cache[movieNum] = res.data
-    util.saveToStorage(cacheKey, cache)
-    return cache[movieNum]
+export function getFavMovie() {
+    return util.loadFromStorage(FAV_MOVIE_KEY) || null
+}
+export function saveFavMovie(movie) {
+    util.saveToStorage(FAV_MOVIE_KEY, movie)
 }
