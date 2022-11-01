@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/%7BStar-Wars%7D/static/css/main.dbcbe532.css",
+    "main.js": "/%7BStar-Wars%7D/static/js/main.9b41b0ae.js",
+    "index.html": "/%7BStar-Wars%7D/index.html",
+    "main.dbcbe532.css.map": "/%7BStar-Wars%7D/static/css/main.dbcbe532.css.map",
+    "main.9b41b0ae.js.map": "/%7BStar-Wars%7D/static/js/main.9b41b0ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbcbe532.css",
+    "static/js/main.9b41b0ae.js"
+  ]
+}
